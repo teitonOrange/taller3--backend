@@ -26,19 +26,23 @@ Tener certeza de contar con todo lo siguiente para poder ejecutar el proyecto de
 - MySQL Workbench
 - Git
 
-## Instalación
+## Instalación local
 
 1. **Clonar el repositorio**:
 
     ```bash
     git clone https://github.com/teitonOrange/taller3--backend.git
     ```
+    
 
 2. **Instalar las dependencias**:
 
     ```bash
     
     npm install
+    ```
+    ```bash
+    npm install -g sequelize-cli
     ```
 
 3. **Configura las variables de entorno** en un archivo `.env`:
@@ -48,6 +52,12 @@ Tener certeza de contar con todo lo siguiente para poder ejecutar el proyecto de
     DB_USER=your-database-user
     DB_PASSWORD=your-database-password
     DB_NAME=your-database-name
+    ```
+    ```bash
+
+    sequelize db:create
+	sequelize db:migrate
+	sequelize db:seed:all
     ```
 
 4. **Inicia el servidor localmente**:
